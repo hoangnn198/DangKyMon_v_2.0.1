@@ -24,12 +24,15 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
                     style="@style/viewParent.headerText.NoMode"
-                    android:textColor="@color/whiteTextColor"
-                    android:text="Chào Mừng\n Sinh Viên\n  Đăng Nhập"/>
+                    android:layout_width="163dp"
+                    android:layout_height="139dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Chào Mừng\n Sinh Viên\n  Đăng Nhập"
+                    android:textColor="@color/whiteTextColor" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -73,7 +76,7 @@
                             style="@style/modifiedEditText"
                             android:hint="@string/login_password_hint"
                             android:maxLines="1"
-                            android:text="123123"
+                            android:text="123456"
                             android:inputType="textPassword"/>
                     </com.google.android.material.textfield.TextInputLayout>
                     <CheckBox
@@ -82,7 +85,6 @@
                         android:text="Nhớ mật khẩu?"
                         android:textColor="@color/primaryTextColor"
                         android:textSize="@dimen/newsMoreTextSize"
-                        android:layout_gravity="end"
                         android:layout_marginTop="10dp"/>
                     <TextView
                         android:id="@+id/tvResetPass"

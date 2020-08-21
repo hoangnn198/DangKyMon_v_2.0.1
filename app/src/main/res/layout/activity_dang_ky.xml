@@ -25,7 +25,7 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="127dp">
+                android:layout_height="wrap_content">
 
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
@@ -36,12 +36,12 @@
                     android:textSize="35sp" />
 
                 <ImageView
-                    android:layout_width="134dp"
-                    android:layout_height="109dp"
+                    android:layout_width="138dp"
+                    android:layout_height="112dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="0dp"
-                    android:layout_marginRight="4dp"
+                    android:layout_marginRight="0dp"
                     android:src="@drawable/dangky" />
             </RelativeLayout>
 
@@ -118,7 +118,7 @@
                         android:id="@+id/btnSaveInForm"
                         style="@style/loginButton"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:layout_marginTop="20dp"
                         android:text="Lưu"
                         app:initialCornerAngle="27dp"
                         app:spinning_bar_color="#FFF"
