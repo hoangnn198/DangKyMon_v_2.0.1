@@ -20,7 +20,6 @@
         <activity android:name=".GiaoDien.SettingActivity" />
         <activity android:name=".GiaoDien.HomeActivity" />
         <activity android:name=".GiaoDien.LoginActivity" />
-        <activity android:name=".GiaoDienDangKy.FormDangKyActivity" />
         <activity android:name=".GiaoDienDangKy.LopHocActivity" />
         <activity android:name=".GiaoDienDangKy.MonHocActivity" />
         <activity android:name=".GiaoDienDangKy.NganhHocActivity" />

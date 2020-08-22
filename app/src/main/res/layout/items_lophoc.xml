@@ -12,7 +12,7 @@
         android:id="@+id/tvLopHoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Lap trinh di dong"
+        android:hint="Đang Cập Nhật Dữ Liệu...."
         android:textColor="@color/miniTitle"
         android:textSize="17sp"
         android:layout_marginBottom="5dp" />
