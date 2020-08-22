@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GiaoDien.ResetPassActivity"
+    android:background="@color/login_bk_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đổi Mật Khẩu"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="30sp"
+            android:background="@color/register_bk_color"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/btnBackEditPass"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp"
+        android:paddingTop="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPass1"
+                style="@style/parent"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPass1"
+                    style="@style/modifiedEditText"
+                    android:inputType="textPassword"                    android:maxLines="1"
+                    android:hint="Nhập Mật Khẩu Cũ"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPass2"
+                style="@style/parent"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPass2"
+                    style="@style/modifiedEditText"
+                    android:inputType="textPassword"                    android:maxLines="1"
+                    android:hint="Nhập Mật Khẩu Mới" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPass3"
+                style="@style/parent"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPass3"
+                    style="@style/modifiedEditText"
+                    android:inputType="textPassword"                    android:maxLines="1"
+                    android:hint="Nhập Lại Mật Khẩu"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                android:id="@+id/btnEditPass"
+                style="@style/loginButton"
+                app:spinning_bar_width="4dp"
+                app:spinning_bar_color="#FFF"
+                android:text="Đổi Mật Khẩu"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                app:spinning_bar_padding="6dp"
+                app:initialCornerAngle="27dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

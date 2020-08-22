@@ -1,0 +1,162 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GiaoDien.SettingActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bk_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thông Tin Cá Nhân"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="30sp"
+            android:background="@color/register_bk_color"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/btnBackUser"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="55dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <RelativeLayout
+                android:layout_width="371dp"
+                android:layout_height="108dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="86dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_avatar"
+                    app:civ_border_color="@color/imageBorderColor"
+                    app:civ_border_width="2dp" />
+                <TextView
+                    android:id="@+id/tvTenSV"
+                    style="@style/viewParent.headerText1"
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/imgUser"
+                    android:hint="Đang Cập Nhật..."
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tvMSSV"
+                    style="@style/viewParent.headerText1"
+                    android:layout_below="@id/tvTenSV"
+                    android:layout_toRightOf="@id/imgUser"
+                    android:hint="Đang Cập Nhật..."
+                    android:textColor="#5D5C5C"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Email"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="Đang Cập Nhật..."
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Giới Tính"/>
+
+            <TextView
+                android:id="@+id/tvGioiTinh"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="Đang Cập Nhật..."
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Số Điện Thoại"/>
+
+            <TextView
+                android:id="@+id/tvSdt"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="Đang Cập Nhật..."
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Địa Chỉ"/>
+
+            <TextView
+                android:id="@+id/tvDiachi"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="Đang Cập Nhật..."
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Ngành"/>
+
+            <TextView
+                android:id="@+id/tvNganh"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="Đang Cập Nhật..."
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Trạng Thái"/>
+
+            <TextView
+                android:id="@+id/tvTrangThai"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="Đang Cập Nhật..."
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
