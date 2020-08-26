@@ -38,7 +38,7 @@
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Môn của tôi"
+            android:text="Trạng Thái Đăng Ký"
             android:textColor="@color/miniTitle"
             android:textSize="20sp"
             android:textStyle="bold"

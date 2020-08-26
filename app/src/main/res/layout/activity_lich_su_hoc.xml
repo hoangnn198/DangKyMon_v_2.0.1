@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GiaoDien.TrangthaiduyetActivity">
+    tools:context=".GiaoDien.LichSuHocActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Trạng Thái Đăng Ký"
+            android:text="Lịch Sử Môn Học"
             android:textColor="@color/whiteTextColor"
             android:textSize="30sp"
             android:background="@color/register_bk_color"
@@ -22,7 +23,7 @@
             android:gravity="center" />
 
         <ImageButton
-            android:id="@+id/btnBackMCT"
+            android:id="@+id/btnBacklichsuhoc"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="10dp"
@@ -33,13 +34,12 @@
 
     </RelativeLayout>
 
-    <ListView
-        android:layout_marginTop="5dp"
-        android:id="@+id/lvTrangThai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
 
-    </ListView>
+
+    <ListView
+        android:id="@+id/lvLichSuHoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

@@ -8,35 +8,35 @@
 
     >
 
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/tvMaMon"
-                android:layout_weight="2.2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Đang"
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint=" - "
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvMaMon"
+        android:layout_weight="2.2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Đang"
+        android:textColor="@color/miniTitle"
+        android:textSize="17sp"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint=" - "
+        android:textColor="@color/miniTitle"
+        android:textSize="17sp"
+        />
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:id="@+id/tvMonHoc"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cập Nhật Dữ Liệ...."
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvMonHoc"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cập Nhật Dữ Liệu...."
+        android:textColor="@color/miniTitle"
+        android:textSize="17sp" />
 
 
 

@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,18 +19,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.dangkymonhoc.Adapter.LichHocAdapter;
-import com.example.dangkymonhoc.Adapter.LopHocAdapter;
-import com.example.dangkymonhoc.GiaoDienDangKy.LopHocActivity;
-import com.example.dangkymonhoc.GiaoDienDangKy.TrangthaiduyetActivity;
 import com.example.dangkymonhoc.Model.LichHoc;
-import com.example.dangkymonhoc.Model.LopHoc;
 import com.example.dangkymonhoc.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
