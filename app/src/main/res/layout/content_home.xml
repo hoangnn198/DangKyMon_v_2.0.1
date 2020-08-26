@@ -49,13 +49,13 @@
                     android:hint="Đang Cập Nhật..."
                     android:textSize="20sp" />
                 <ImageView
-                android:id="@+id/img"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="0dp"
-                android:layout_width="26dp"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/thongbao" />
+                    android:id="@+id/img"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="0dp"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/thongbao" />
 
 
             </RelativeLayout>
@@ -149,6 +149,7 @@
                 <include layout="@layout/card_danhsach" />
                 <include layout="@layout/card_trangthai" />
                 <include layout="@layout/card_lichhoc" />
+                <include layout="@layout/card_lichsuhoc" />
 
             </LinearLayout>
 

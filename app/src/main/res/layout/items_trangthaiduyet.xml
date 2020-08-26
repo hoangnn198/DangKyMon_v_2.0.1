@@ -83,8 +83,8 @@
     </LinearLayout>
     <LinearLayout
         android:background="@color/colorAccent"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:orientation="vertical"
         android:layout_margin="5dp"
         android:gravity="center"
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chờ duyệt"
-            android:textSize="17sp"
+            android:textSize="14sp"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="#ffffff"

@@ -17,9 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.dangkymonhoc.GiaoDienDangKy.DangKyActivity;
-import com.example.dangkymonhoc.GiaoDienDangKy.NganhHocActivity;
 
-import com.example.dangkymonhoc.GiaoDienDangKy.TrangthaiduyetActivity;
 import com.example.dangkymonhoc.R;
 
 import org.json.JSONArray;
@@ -30,9 +28,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageView img_nganhHoc, img_monHoc, img_lichHoc, img_thongTin;
+    ImageView img_nganhHoc, img_monHoc, img_lichHoc, img_thongTin,img_lichsuhoc;
     TextView tvMssv,tvTen;
-    String idSV, maSV,TenSinhVien;
+    String idSV, maSV,TenSinhVien,idNganh;
 
     private RequestQueue tQueue;
     @Override
@@ -72,6 +70,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                                     maSV = data.getString("MaSinhVien");
                                     TenSinhVien = data.getString("TenSinhVien");
 
+                                    idNganh=data.getString("Id_NganhHoc");
+
                                     tvMssv.setText(maSV);
                                     tvTen.setText(TenSinhVien);
                                 }
@@ -103,6 +103,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void AnhXa(){
+        img_lichsuhoc = findViewById(R.id.img_lichsuhoc);
         img_nganhHoc = findViewById(R.id.img_nganhHoc);
         img_monHoc = findViewById(R.id.img_monHoc);
         img_lichHoc = findViewById(R.id.img_lichHoc);
@@ -110,7 +111,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void Click(){
-
+        img_lichsuhoc.setOnClickListener(this);
         img_nganhHoc.setOnClickListener(this);
         img_monHoc.setOnClickListener(this);
         img_lichHoc.setOnClickListener(this);
@@ -122,6 +123,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.img_lichsuhoc:
+                Intent lichsuhoc = new Intent(this, LichSuHocActivity.class);
+                lichsuhoc.putExtra("idSV",idSV);
+                lichsuhoc.putExtra("idNganh",idNganh);
+                startActivity(lichsuhoc);
+                break;
             case R.id.img_nganhHoc:
                 Intent nganhhoc = new Intent(this, DangKyActivity.class);
                 nganhhoc.putExtra("idSV",idSV);
