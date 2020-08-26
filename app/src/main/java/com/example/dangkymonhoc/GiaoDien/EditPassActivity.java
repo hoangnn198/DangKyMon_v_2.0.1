@@ -44,6 +44,7 @@ public class EditPassActivity extends AppCompatActivity {
         img_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 finish();
             }
         });

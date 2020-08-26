@@ -44,6 +44,7 @@ public class SettingActivity extends AppCompatActivity {
         imgBack=findViewById(R.id.btnBackCaidat);
 
 
+
         Intent intent = getIntent();
         maSV = intent.getStringExtra("maSV");
         Log.d("maSV",maSV);
@@ -80,16 +81,15 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SettingActivity.this,LoginActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                finish();
             }
         });
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent i = new Intent(SettingActivity.this,HomeActivity.class);
-//                i.putExtra("maSV",maSV);
-//                startActivity(i);
-                finish();
+               finish();
             }
         });
 

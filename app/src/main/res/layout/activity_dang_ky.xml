@@ -62,11 +62,11 @@
                         android:padding="5dp"
                         style="@style/viewParent.headerText.settingsMiniTitle"
                         android:text="@string/monhoc_hint"/>
+
                     <Spinner
                         android:id="@+id/spinner"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        />
+                        android:layout_height="60dp" />
                     <TextView
                         android:padding="5dp"
                         style="@style/viewParent.headerText.settingsMiniTitle"
