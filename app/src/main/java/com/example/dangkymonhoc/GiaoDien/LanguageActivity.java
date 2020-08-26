@@ -24,9 +24,10 @@ public class LanguageActivity extends AppCompatActivity {
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LanguageActivity.this, SettingActivity.class);
-                i.putExtra("maSV",maSV);
-                startActivity(i);
+//                Intent i = new Intent(LanguageActivity.this, SettingActivity.class);
+//                i.putExtra("maSV",maSV);
+//                startActivity(i);
+                finish();
 
 
             }

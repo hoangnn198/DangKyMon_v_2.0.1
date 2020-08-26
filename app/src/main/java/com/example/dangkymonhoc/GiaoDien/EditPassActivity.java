@@ -85,9 +85,9 @@ public class EditPassActivity extends AppCompatActivity {
                             if (jsonObject.getInt("resultCode") == 1){
                                 if (newpass.equals(newPassconfirm)){
                                // message = jsonObject.getString("message");
-                                Toast.makeText(EditPassActivity.this, "doi mat khau thanh cong", Toast.LENGTH_SHORT).show();}
+                                Toast.makeText(EditPassActivity.this, "Đổi mật khẩu thành công", Toast.LENGTH_SHORT).show();}
                                 else{
-                                    Toast.makeText(EditPassActivity.this,"Mat khau khong khop",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(EditPassActivity.this,"Mật khẩu không trùng khớp",Toast.LENGTH_SHORT).show();
                                 }
                             }else {
                                 message = jsonObject.getString("message");

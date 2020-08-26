@@ -10,4 +10,6 @@
     <string name="cahoc_hint">Ca Học</string>
     <string name="login_email_hint">Username</string>
     <string name="login_password_hint">Password</string>
+    <string name="channel_name">Test</string>
+    <string name="channel_des">Thong bao</string>
 </resources>

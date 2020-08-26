@@ -86,9 +86,10 @@ public class SettingActivity extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SettingActivity.this,HomeActivity.class);
-                i.putExtra("maSV",maSV);
-                startActivity(i);
+//                Intent i = new Intent(SettingActivity.this,HomeActivity.class);
+//                i.putExtra("maSV",maSV);
+//                startActivity(i);
+                finish();
             }
         });
 
