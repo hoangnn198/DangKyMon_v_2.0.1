@@ -1,9 +1,15 @@
 package com.example.dangkymonhoc.GiaoDienDangKy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteCursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +31,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.dangkymonhoc.Adapter.LopHocAdapter;
 import com.example.dangkymonhoc.Adapter.MonHocAdapter;
 import com.example.dangkymonhoc.GiaoDien.HomeActivity;
+import com.example.dangkymonhoc.GiaoDien.LichHocActivity;
 import com.example.dangkymonhoc.Model.LopHoc;
 import com.example.dangkymonhoc.Model.MonHoc;
 import com.example.dangkymonhoc.R;
@@ -60,6 +67,7 @@ public class DangKyActivity extends AppCompatActivity {
         tvNgayHoc = findViewById(R.id.tvNgayHoc);
         imgbackdk = findViewById(R.id.imgbackdk);
         btnSaveInForm = findViewById(R.id.btnSaveInForm);
+        createNotificationChannel();
         DangKy();
 
         imgbackdk.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +80,38 @@ public class DangKyActivity extends AppCompatActivity {
 
 
     }
+    private void addNotification(){
+            String tiltle = "Da dang ky mon hoc thanh cong" ;
+            String message = "Xem chi tiet lich hoc";
+
+            Intent notificationIntent = new Intent(this, LichHocActivity.class);
+            notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            notificationIntent.putExtra("idSV",idSV);
+            notificationIntent.putExtra("message",message);
+            notificationIntent.putExtra("title",tiltle);
+
+            PendingIntent pendingIntent = PendingIntent.getActivity(this,0,notificationIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"id_001")
+                .setSmallIcon(R.drawable.ic_notifications)
+                .setContentTitle(tiltle)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true);
+            NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            manager.notify(0,builder.build());
+    }
+    private void createNotificationChannel(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            CharSequence name = getString(R.string.channel_name);
+            String description = getString(R.string.channel_des);
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("id_001",name,importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
     private void insertMon(final String lophoc) {
         String url = "https://dangkymonhoc.000webhostapp.com/API/insertMonHoc.php";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -83,6 +123,7 @@ public class DangKyActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             if (jsonObject.getInt("resultCode") == 1){
+                                addNotification();
                                 Toast.makeText(DangKyActivity.this,jsonObject.getString("message"),Toast.LENGTH_LONG).show();
                                 finish();
                             }else{
@@ -221,6 +262,7 @@ public class DangKyActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(View v) {
                                                 insertMon(lop);
+
                                             }
                                         });
                                     }
