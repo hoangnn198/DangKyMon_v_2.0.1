@@ -28,7 +28,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageView img_nganhHoc, img_monHoc, img_lichHoc, img_thongTin,img_lichsuhoc;
+    ImageView img_dangkymonhoc, img_trangthaimonhoc, img_lichHoc, img_caidat,img_lichsuhoc;
+    TextView tv_dangkymonhoc,tv_trangthaimonhoc,tv_lichhoc,tv_caidat,tv_lichsuhoc;
     TextView tvMssv,tvTen;
     String idSV, maSV,TenSinhVien,idNganh;
 
@@ -103,19 +104,33 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void AnhXa(){
-        img_lichsuhoc = findViewById(R.id.img_lichsuhoc);
-        img_nganhHoc = findViewById(R.id.img_nganhHoc);
-        img_monHoc = findViewById(R.id.img_monHoc);
+        img_lichsuhoc = findViewById(R.id.img_lichsumonhoc);
+        img_dangkymonhoc = findViewById(R.id.img_dangkymonhoc);
+        img_trangthaimonhoc = findViewById(R.id.img_trangthaidangky);
         img_lichHoc = findViewById(R.id.img_lichHoc);
-        img_thongTin = findViewById(R.id.img_caiDat);
+        img_caidat = findViewById(R.id.img_caidat);
+
+        tv_lichsuhoc = findViewById(R.id.tv_lichsumonhoc);
+        tv_dangkymonhoc = findViewById(R.id.tv_dangkymonhoc);
+        tv_trangthaimonhoc = findViewById(R.id.tv_trangthaidangky);
+        tv_lichhoc = findViewById(R.id.tv_lichhoc);
+        tv_caidat = findViewById(R.id.tv_caidat);
+
     }
 
     private void Click(){
+
         img_lichsuhoc.setOnClickListener(this);
-        img_nganhHoc.setOnClickListener(this);
-        img_monHoc.setOnClickListener(this);
+        img_dangkymonhoc.setOnClickListener(this);
+        img_trangthaimonhoc.setOnClickListener(this);
         img_lichHoc.setOnClickListener(this);
-        img_thongTin.setOnClickListener(this);
+        img_caidat.setOnClickListener(this);
+
+        tv_lichsuhoc.setOnClickListener(this);
+        tv_dangkymonhoc.setOnClickListener(this);
+        tv_trangthaimonhoc.setOnClickListener(this);
+        tv_lichhoc.setOnClickListener(this);
+        tv_caidat.setOnClickListener(this);
     }
 
 
@@ -123,31 +138,58 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.img_lichsuhoc:
+            case R.id.img_lichsumonhoc:
                 Intent lichsuhoc = new Intent(this, LichSuHocActivity.class);
                 lichsuhoc.putExtra("idSV",idSV);
                 lichsuhoc.putExtra("idNganh",idNganh);
                 startActivity(lichsuhoc);
                 break;
-            case R.id.img_nganhHoc:
-                Intent nganhhoc = new Intent(this, DangKyActivity.class);
-                nganhhoc.putExtra("idSV",idSV);
-                startActivity(nganhhoc);
+            case R.id.img_dangkymonhoc:
+                Intent dangkymonhoc = new Intent(this, DangKyActivity.class);
+                dangkymonhoc.putExtra("idSV",idSV);
+                startActivity(dangkymonhoc);
                 break;
-            case R.id.img_monHoc:
-                Intent monhoc = new Intent(this, TrangthaiduyetActivity.class);
-                monhoc.putExtra("idSV",idSV);
-                startActivity(monhoc);
+            case R.id.img_trangthaidangky:
+                Intent trangthaidangky = new Intent(this, TrangthaiduyetActivity.class);
+                trangthaidangky.putExtra("idSV",idSV);
+                startActivity(trangthaidangky);
                 break;
             case R.id.img_lichHoc:
                 Intent lichhoc = new Intent(this, LichHocActivity.class);
                 lichhoc.putExtra("idSV",idSV);
                 startActivity(lichhoc);
                 break;
-            case R.id.img_caiDat:
-                Intent thongtin = new Intent(this, SettingActivity.class);
-                thongtin.putExtra("maSV",maSV);
-                startActivity(thongtin);
+            case R.id.img_caidat:
+                Intent caidat = new Intent(this, SettingActivity.class);
+                caidat.putExtra("maSV",maSV);
+                startActivity(caidat);
+                break;
+
+            case R.id.tv_lichsumonhoc:
+                Intent lichsuhoc1 = new Intent(this, LichSuHocActivity.class);
+                lichsuhoc1.putExtra("idSV",idSV);
+                lichsuhoc1.putExtra("idNganh",idNganh);
+                startActivity(lichsuhoc1);
+                break;
+            case R.id.tv_dangkymonhoc:
+                Intent dangkymonhoc1 = new Intent(this, DangKyActivity.class);
+                dangkymonhoc1.putExtra("idSV",idSV);
+                startActivity(dangkymonhoc1);
+                break;
+            case R.id.tv_trangthaidangky:
+                Intent trangthaidangky1 = new Intent(this, TrangthaiduyetActivity.class);
+                trangthaidangky1.putExtra("idSV",idSV);
+                startActivity(trangthaidangky1);
+                break;
+            case R.id.tv_lichhoc:
+                Intent lichhoc1 = new Intent(this, LichHocActivity.class);
+                lichhoc1.putExtra("idSV",idSV);
+                startActivity(lichhoc1);
+                break;
+            case R.id.tv_caidat:
+                Intent caidat1 = new Intent(this, SettingActivity.class);
+                caidat1.putExtra("maSV",maSV);
+                startActivity(caidat1);
                 break;
 
         }

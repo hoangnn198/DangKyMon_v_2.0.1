@@ -3,39 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:padding="10dp"
-    android:layout_marginTop="15dp">
+
+    android:layout_marginTop="10dp">
 
     <LinearLayout
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_weight="1"
+        android:layout_width="303dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_marginLeft="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Môn Học:"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:textColor="@color/miniTitle"/>
-            <TextView
-                android:textColor="#000000"
-                android:id="@+id/tv_MONHOC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Đang Cập Nhật..."
-                android:textSize="17sp"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_MONHOC"
+            android:layout_width="303dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:hint="Đang Cập Nhật..."
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
 
     </LinearLayout>
     <LinearLayout
@@ -45,17 +32,15 @@
         android:orientation="vertical"
         android:layout_margin="5dp"
         android:gravity="center"
-        android:id="@+id/layout"
-        >
+        android:id="@+id/layout">
         <TextView
             android:id="@+id/tv_TRANGTHAI"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chờ duyệt"
-            android:textSize="17sp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:gravity="center"
-            android:textStyle="bold"
+            android:text="Đang Cập Nhật"
             android:textColor="#ffffff"
-            />
+            android:textSize="15sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>
