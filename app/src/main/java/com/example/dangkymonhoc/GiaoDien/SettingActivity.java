@@ -1,11 +1,13 @@
 package com.example.dangkymonhoc.GiaoDien;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,8 +29,8 @@ import java.util.Map;
 
 public class SettingActivity extends AppCompatActivity {
     private RequestQueue tQueue;
-    TextView tvMssv,tvTenSV,tvUserSV,tvEditPass,tvLanguage,tvThoat;
-
+    TextView tvMssv,tvTenSV,tvUserSV,tvEditPass,tvLanguage,tvThoat,textView;
+    SwitchCompat switchCompat;
     String maSV,TenSinhVien;
     ImageView imgBack;
     @Override
@@ -42,8 +44,7 @@ public class SettingActivity extends AppCompatActivity {
         tvLanguage= findViewById(R.id.tvLanguage);
         tvEditPass = findViewById(R.id.tvEditPassword);
         imgBack=findViewById(R.id.btnBackCaidat);
-
-
+       
 
         Intent intent = getIntent();
         maSV = intent.getStringExtra("maSV");
@@ -67,6 +68,8 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
+
+//
 
         tvUserSV.setOnClickListener(new View.OnClickListener() {
             @Override

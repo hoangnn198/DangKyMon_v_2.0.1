@@ -54,9 +54,9 @@ public class LichSuAdapter extends BaseAdapter {
         tvMonHoc.setText(listLichSu.get(position).getMonHoc());
         tvTrangThai.setText(listLichSu.get(position).getTrangThai());
 
-        if (Integer.parseInt(listLichSu.get(position).getIdTrangThai()) == 4) {
+        if (Integer.parseInt(listLichSu.get(position).getIdTrangThai()) == 2) {
             layout.setBackgroundColor(Color.parseColor("#336633"));
-        }else if (Integer.parseInt(listLichSu.get(position).getIdTrangThai()) == 2){
+        }else if (Integer.parseInt(listLichSu.get(position).getIdTrangThai()) == 1){
             layout.setBackgroundColor(Color.parseColor("#663366"));
         }
 

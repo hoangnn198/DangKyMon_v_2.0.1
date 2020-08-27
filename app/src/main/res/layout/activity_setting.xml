@@ -98,12 +98,18 @@
             style="@style/viewParent.headerText.settingsMiniTitle"
             android:text="Thông Báo"/>
 
-        <Switch
+
+
+        <androidx.appcompat.widget.SwitchCompat
             style="@style/settingsText"
-            android:checked="false"
+            android:id="@+id/switch_id"
+            android:checked="true"
             android:drawableLeft="@drawable/ic_notifications"
             android:text="Thông Báo" />
-
+            <TextView
+                android:id="@+id/textview_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
             android:text="khác"/>

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_register_hero"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GiaoDienDangKy.DangKyActivity"></activity>
+
+        <activity android:name=".GiaoDienDangKy.DangKyActivity" />
         <activity android:name=".GiaoDien.TrangthaiduyetActivity" />
         <activity android:name=".GiaoDien.LichSuHocActivity" />
         <activity android:name=".GiaoDien.ResetPassActivity" />

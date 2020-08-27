@@ -1,8 +1,14 @@
 package com.example.dangkymonhoc.GiaoDien;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -63,6 +69,7 @@ public class LichHocActivity extends AppCompatActivity {
 //        String formatdate = "EE, dd-MM-yyyy";
 //        textClock.setFormat12Hour(formatdate);
 //        textClock.setFormat24Hour(formatdate);
+//        createNotificationChannel();
         getLichHoc();
         DateFormat df = new SimpleDateFormat("EE, dd-MM-YYYY");
         Date date = new Date();
@@ -72,6 +79,8 @@ public class LichHocActivity extends AppCompatActivity {
         Log.d("StartDate: ",strToday);
 //
 }
+
+
     private  void getLichHoc(){
         String url = "https://dangkymonhoc.000webhostapp.com/API/getLichHocDemo.php";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -90,6 +99,7 @@ public class LichHocActivity extends AppCompatActivity {
                                     JSONObject data = jsonArray.getJSONObject(i);
 
                                     if(data.getString("Ngay").equalsIgnoreCase(strToday)){
+//                                        addNotification();
                                         LichHoc lichHoc = new LichHoc();
                                         lichHoc.setNgayHoc(data.getString("Ngay"));
 

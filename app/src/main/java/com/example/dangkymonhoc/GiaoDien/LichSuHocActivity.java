@@ -82,7 +82,7 @@ public class LichSuHocActivity extends AppCompatActivity {
 
                                     lichSu.setMonHoc(data.getString("MonHoc"));
                                     lichSu.setIdTrangThai(data.getString("Id_TrangThai"));
-                                    lichSu.setTrangThai(data.getString("TrangThaiDuyet"));
+                                    lichSu.setTrangThai(data.getString("TrangThaiMon"));
                                     list.add(lichSu);
                                 }
                                lichSuAdapter = new LichSuAdapter(LichSuHocActivity.this,R.layout.items_lichsuhoc,list);

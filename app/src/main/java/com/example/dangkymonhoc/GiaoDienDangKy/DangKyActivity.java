@@ -32,6 +32,7 @@ import com.example.dangkymonhoc.Adapter.LopHocAdapter;
 import com.example.dangkymonhoc.Adapter.MonHocAdapter;
 import com.example.dangkymonhoc.GiaoDien.HomeActivity;
 import com.example.dangkymonhoc.GiaoDien.LichHocActivity;
+import com.example.dangkymonhoc.GiaoDien.TrangthaiduyetActivity;
 import com.example.dangkymonhoc.Model.LopHoc;
 import com.example.dangkymonhoc.Model.MonHoc;
 import com.example.dangkymonhoc.R;
@@ -81,10 +82,10 @@ public class DangKyActivity extends AppCompatActivity {
 
     }
     private void addNotification(){
-            String tiltle = "Da dang ky mon hoc thanh cong" ;
-            String message = "Xem chi tiet lich hoc";
+            String tiltle = "Đã đăng ký môn học thành công" ;
+            String message = "Xem chi tiết";
 
-            Intent notificationIntent = new Intent(this, LichHocActivity.class);
+            Intent notificationIntent = new Intent(this, TrangthaiduyetActivity.class);
             notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             notificationIntent.putExtra("idSV",idSV);
             notificationIntent.putExtra("message",message);
