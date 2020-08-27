@@ -34,12 +34,35 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="244dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="MÔN HỌC"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="167dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TRẠNG THÁI"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/lvLichSuHoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
 </LinearLayout>
