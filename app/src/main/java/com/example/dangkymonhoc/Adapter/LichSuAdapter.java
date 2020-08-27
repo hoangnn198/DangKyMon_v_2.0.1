@@ -1,10 +1,12 @@
 package com.example.dangkymonhoc.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.dangkymonhoc.Model.LichSu;
@@ -47,9 +49,16 @@ public class LichSuAdapter extends BaseAdapter {
         convertView = inflater.inflate(layout,null);
         tvMonHoc = convertView.findViewById(R.id.tv_MONHOC);
         tvTrangThai = convertView.findViewById(R.id.tv_TRANGTHAI);
+        final LinearLayout layout =convertView.findViewById(R.id.layout);
 
         tvMonHoc.setText(listLichSu.get(position).getMonHoc());
         tvTrangThai.setText(listLichSu.get(position).getTrangThai());
+
+        if (Integer.parseInt(listLichSu.get(position).getIdTrangThai()) == 4) {
+            layout.setBackgroundColor(Color.parseColor("#336633"));
+        }else if (Integer.parseInt(listLichSu.get(position).getIdTrangThai()) == 2){
+            layout.setBackgroundColor(Color.parseColor("#663366"));
+        }
 
         return convertView;
     }
