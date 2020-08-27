@@ -105,8 +105,9 @@ public class LichSuHocActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
-                Log.d("AAAA111",idNganh);
+                Log.d("AAAA111",idNganh+" - " +idSV);
                 params.put("idNganh",idNganh);
+                params.put("idSV",idSV);
                 return params;
             }
         };

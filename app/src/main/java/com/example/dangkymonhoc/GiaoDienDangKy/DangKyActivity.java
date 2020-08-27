@@ -215,6 +215,7 @@ public class DangKyActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
 //                Log.d("AAAA111","1");
+                params.put("idSV",idSV);
                 params.put("idNganh","1");
                 return params;
             }
